@@ -1,0 +1,485 @@
+/* Elementor Navigation - Advanced Styles */
+/* Handles positioning, spacing, shadows, animations, and advanced layout */
+
+/* Hero Header */
+.hero-header {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* Hero Background */
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/assets/E03A3223.JPG'); /* You can change this image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  z-index: 1;
+}
+
+/* Hero Overlay */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(70, 80, 81, 0.3) 0%,
+    rgba(70, 80, 81, 0.1) 50%,
+    rgba(70, 80, 81, 0.3) 100%
+  );
+  z-index: 2;
+}
+
+/* Top Navigation Bar Advanced */
+.top-navigation-advanced {
+  position: relative;
+  z-index: 10;
+  background-color: transparent;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Top Left Container for Buttons */
+.top-left {
+  display: flex;
+  align-items: center;
+  gap: 0px;
+}
+
+/* Right Side Controls Container */
+.right-side-controls {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+/* Main Navigation Bar Advanced */
+.main-navigation-advanced {
+  position: relative;
+  z-index: 10;
+  background: rgba(70, 80, 81, 0.6);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  min-height: 80px;
+}
+
+/* Logo Advanced */
+.logo-advanced {
+  flex-shrink: 0;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.logo-icon-advanced {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #465051;
+  color: #f8f6f0;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.logo-text-content {
+  margin-left: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #f8f6f0;
+  white-space: nowrap;
+}
+
+/* Menu Advanced */
+.menu-advanced {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.menu-left-advanced {
+  justify-content: flex-start;
+  width: 40%;
+  display: flex;
+  align-items: center;
+}
+
+.menu-right-advanced {
+  justify-content: flex-end;
+  width: 40%;
+  display: flex;
+  align-items: center;
+}
+
+.menu-item-advanced {
+  position: relative;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  color: #f8f6f0;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.menu-item-advanced:hover {
+  color: #f8f6f0;
+  background-color: rgba(248, 246, 240, 0.1);
+}
+
+.menu-text {
+  font-size: 14px;
+  font-weight: 500;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+/* Dropdown Advanced */
+.dropdown-advanced {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 200px;
+  z-index: 1000;
+  margin-top: 8px;
+  transform-origin: top center;
+  background: rgba(70, 80, 81, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(248, 246, 240, 0.2);
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
+
+.menu-item-advanced:hover .dropdown-advanced {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-item-advanced {
+  padding: 12px 16px;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid rgba(248, 246, 240, 0.1);
+  color: #f8f6f0;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.dropdown-item-advanced:hover {
+  background-color: rgba(248, 246, 240, 0.1);
+  padding-left: 20px;
+  color: #f8f6f0;
+}
+
+.dropdown-item-advanced:last-child {
+  border-bottom: none;
+}
+
+/* Search Button Advanced */
+.search-button-advanced {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  border-radius: 0px;
+  background-color: transparent; /* Brand color */
+}
+
+.search-button-advanced .search-icon {
+  color: #f8f6f0; /* Pearl White icon */
+}
+
+.search-button-advanced .search-text {
+  color: #f8f6f0;
+}
+
+.search-button-advanced:hover {
+  background-color: transparent;
+  transition: all 0.3s ease;
+  text-decoration: underline #f8f6f0;
+  text-underline-offset: 4px;
+}
+
+.search-button-advanced:hover .search-text {
+  color: #f8f6f0;
+  transition: all 0.3s ease;
+}
+
+.search-button-advanced:hover .search-icon {
+  color: #f8f6f0; /* Pearl White icon */
+  transition: all 0.3s ease;
+}
+
+/* Language Button */
+.language-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid transparent;
+  border-radius: 0;
+  color: #f8f6f0;
+  transition: all 0.3s ease;
+}
+
+.language-button .flag-icon {
+  color: #f8f6f0; /* Pearl White icon */
+  transition: all 0.3s ease;
+}
+
+.language-button .language-text {
+  font-weight: 500;
+  transition: all 0.3s ease;
+  color: #f8f6f0; /* Pearl White text */
+}
+
+.language-button .dropdown-icon {
+  color: #f8f6f0; /* Pearl White icon */
+  transition: all 0.3s ease;
+  transform: rotate(0deg);
+}
+
+.language-button:hover {
+  color: #f8f6f0; /* Brand color text on hover */
+  text-decoration: underline #f8f6f0;
+  text-underline-offset: 4px;
+}
+
+.language-button:hover .flag-icon {
+  color: #f8f6f0; /* Brand color icon on hover */
+}
+
+.language-button:hover .language-text {
+  color: #f8f6f0; /* Brand color text on hover */
+}
+
+.language-button:hover .dropdown-icon {
+  color: #f8f6f0; /* Brand color icon on hover */
+  transform: rotate(180deg); /* Turn upside down on hover */
+}
+
+/* Sign In / Register Button */
+.signin-register-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px; 
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 0; /* Sharp, square corners */
+  background-color: transparent;
+  color: #f8f6f0; /* Pearl White text */
+  gap: 8px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  padding: 10px 16px;
+  white-space: nowrap;
+  text-align: center; /* Ensure text is centered */
+}
+
+/* Reserve Button */
+.reserve-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px; 
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 0; /* Sharp, square corners */
+  background-color: transparent;
+  color: #f8f6f0; /* Pearl White text */
+  gap: 8px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  padding: 10px 16px;
+  white-space: nowrap;
+  text-align: center; /* Ensure text is centered */
+}
+
+.reserve-button:hover {
+  background-color: transparent;
+  text-decoration: underline #f8f6f0;
+  text-underline-offset: 4px;
+  border-color: #f8f6f0;
+}
+
+.signin-register-button:hover {
+  border-color: #f8f6f0; /* Pearl White border on hover */
+}
+
+/* Button Text */
+.signin-register-button .button-text,
+.reserve-button .button-text {
+  transition: all 0.3s ease;
+  font-size: 14px;
+  text-align: center;
+  line-height: 1.2;
+}
+
+/* Button Icon (only for Sign In / Register button) */
+.signin-register-button .button-icon {
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all 0.3s ease;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.signin-register-button:hover .button-icon {
+  opacity: 1;
+  transform: translateX(0);
+  animation: iconFadeIn 0.3s ease forwards;
+}
+
+/* Hide icon for Reserve button */
+.reserve-button .button-icon {
+  display: none;
+}
+
+@keyframes iconFadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Button Advanced */
+.button-advanced {
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.button-advanced:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+/* Responsive Advanced */
+@media (max-width: 768px) {
+  .menu-advanced {
+    display: none;
+  }
+  
+  .search-advanced {
+    min-width: 200px;
+  }
+  
+  .logo-advanced {
+    margin: 0 20px;
+  }
+  
+  .signin-register-button,
+  .reserve-button {
+    width: 160px; /* Smaller square for mobile */
+    height: 56px; /* Smaller square for mobile */
+    font-size: 12px; /* Smaller font for mobile */
+  }
+  
+  .signin-register-button .button-icon {
+    font-size: 12px; /* Smaller icon for mobile */
+  }
+}
+
+/* Animation Classes */
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+.slide-up {
+  animation: slideUp 0.4s ease-out;
+}
+
+/* Additional Navigation Utilities */
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.nav-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-divider {
+  width: 1px;
+  height: 40px;
+  background-color: rgba(248, 246, 240, 0.3);
+  margin: 0 10px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { 
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
