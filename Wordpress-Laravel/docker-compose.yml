@@ -10,7 +10,7 @@ services:
       MYSQL_USER: au_lac_user
       MYSQL_PASSWORD: au_lac_password
     ports:
-      - "3307:3306"
+      - "0.0.0.0:3307:3306"  # Bind to all network interfaces
     volumes:
       - mysql_data:/var/lib/mysql
       - ./Database/init:/docker-entrypoint-initdb.d
@@ -24,7 +24,7 @@ services:
     container_name: au_lac_redis
     restart: unless-stopped
     ports:
-      - "6379:6379"
+      - "0.0.0.0:6379:6379"  # Bind to all network interfaces
     volumes:
       - redis_data:/data
     networks:
@@ -43,7 +43,7 @@ services:
       PMA_PASSWORD: root_password
       MYSQL_ROOT_PASSWORD: root_password
     ports:
-      - "8080:80"
+      - "0.0.0.0:8080:80"  # Bind to all network interfaces
     depends_on:
       - mysql
     networks:
@@ -57,7 +57,7 @@ services:
     container_name: au_lac_laravel
     restart: unless-stopped
     ports:
-      - "8000:8000"
+      - "0.0.0.0:8000:8000"  # Bind to all network interfaces
     volumes:
       - ./Laravel:/var/www/html
       - ./Laravel/storage:/var/www/html/storage
@@ -92,7 +92,7 @@ services:
     container_name: au_lac_wordpress
     restart: unless-stopped
     ports:
-      - "8081:80"
+      - "0.0.0.0:8081:80"  # Bind to all network interfaces
     volumes:
       - ./Wordpress:/var/www/html
       - wordpress_uploads:/var/www/html/wp-content/uploads
